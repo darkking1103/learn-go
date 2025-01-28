@@ -8,17 +8,18 @@ import (
 
 var foo string = "hello world"
 
-/* :=
-The := symbol is part of
-a short variable declaration, a statement that declares one or more variables and gives them
-appropriate types based on the initializer values
+/* := is called walrus operator
+	The := symbol is part of a short variable declaration, a statement that declares one or more variables 
+	and gives them appropriate types based on the initializer values.
+
+	Walrus operator is not allowed to use at package level
 */
 
-/* slice
-s[m:n] yields a slice that refers to elements m thro ugh n-1, so the
-elements we need for our next example are those in the slice os.Args[1:len(os.Args)]. If m
-or n is omitt ed, it defaults to 0 or len(s) respectively, so we can abbreviate the desired slice as
-os.Args[1:]
+/* slice range
+	s[m:n] yields a slice that refers to elements m thro ugh n-1, so the
+	elements we need for our next example are those in the slice os.Args[1:len(os.Args)]. If m
+	or n is omitt ed, it defaults to 0 or len(s) respectively, so we can abbreviate the desired slice as
+	os.Args[1:]
 */
 
 func main() {
@@ -51,7 +52,7 @@ func main() {
 	/* range based loop
 	One idea would be to assign the index to an obviously temporary variable like temp and ignore its value, but Go
 	does not permit unused local variables, so this would result in a compilation error.
-	The solution is to use the blank identifier, whose name is _
+	The solution is to use the "blank identifier", whose name is _
 	*/
 	var arr = [4]string{"Hello", ",", " World", "!\n"}
 	for _, word := range arr {
