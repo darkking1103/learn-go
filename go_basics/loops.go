@@ -1,4 +1,4 @@
-package go_basics
+package main
 
 import (
 	"fmt"
@@ -30,6 +30,12 @@ func main() {
 
 	// while loop
 	var i = 1
+	
+	if len(os.Args) < 2 {
+		fmt.Println("Usage: go run loops.go <integer-arg>")
+		return
+	}
+	
 	var n, err = strconv.Atoi(os.Args[1])
 	if err != nil {
 		fmt.Println("Usage: go run loops.go <integer-arg>")

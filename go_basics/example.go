@@ -1,4 +1,6 @@
-package go_basics
+package main
+
+// These example problems are taken from "The Go Programming Language" book
 
 import (
 	"fmt"

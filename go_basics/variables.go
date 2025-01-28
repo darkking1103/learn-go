@@ -1,4 +1,4 @@
-package go_basics
+package main
 
 import "fmt"
 
@@ -20,4 +20,25 @@ var c = 5 // automatic type deduction
 func main() {
 	variable := 3; // short variable declaration can only be done inside blocks
 	fmt.Println(variable)
+
+	fmt.Printf("Type of variable is \"%T\"\n", variable)
 }
+
+/* Primitive types
+	int along with variants like uint8, uint64, int8, int64, uintptr
+	bool
+	float along with float32 and float64
+	complex
+	string
+*/
+
+/* Compound types
+	Array
+	Slices
+	Maps
+	Structs
+	Pointers
+
+	Functions
+	Channels
+*/
