@@ -1,20 +1,18 @@
 package main
 
-// These example problems are taken from "The Go Programming Language" book
-
 import (
 	"fmt"
 	"os"
 )
 
-// print the name of the program that invoked this program
+// print the name of the program or executable
 func example1() {
 	var arg = os.Args[0]
 	var ans = ""
 	for i := len(arg) - 1; i >= 0 && arg[i] != '/'; i-- {
-		// ans += arg[i] // TODO
+		ans = string(arg[i]) + ans // string and byte concatenation
 	}
-	fmt.Println("this program name is invoked by", ans)
+	fmt.Println("program or executable name is:", ans);
 
 }
 
